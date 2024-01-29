@@ -1,0 +1,86 @@
+main {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+.gallery {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    &.current {
+        opacity: 1;
+        .content {
+            opacity: 1;
+            transform: translateX(600px);
+            transition: all 0.7s ease-in-out 0.3s;
+        }
+    }
+    .content {
+        h2,
+        p{
+            text-align: right;
+        }    
+        position: absolute;
+        top: 3rem;
+        left: 600px;
+        background-color: rgba($sec-c, 0.5);
+        color: $bg-c;
+        padding: 2rem;
+    }
+
+    &:first-child {
+        background: url('/dist/img/christoph-nolte-hUhP8wr_dBo-unsplash.jpg') no-repeat top/cover;
+    &:nth-child(2) {
+        background: url("/Users/apple/Desktop/MediaLP/dist/img/photo-1514496959998-c01c40915c5f.jpeg")
+         no-repeat top/cover;
+    }
+    &:nth-child(3) {
+        background: url("/Users/apple/Desktop/MediaLP/dist/img/photo-1514496959998-c01c40915c5f.jpeg")
+         no-repeat top/cover;
+    }
+    &:nth-child(4) {
+        background: url("/Users/apple/Desktop/MediaLP/dist/img/photo-1514496959998-c01c40915c5f.jpeg")
+         no-repeat top/cover;
+    }
+    &:nth-child(5) {
+        background: url("/Users/apple/Desktop/MediaLP/dist/img/photo-1514496959998-c01c40915c5f.jpeg")
+         no-repeat top/cover;
+    }
+    &:nth-child(6) {
+        background: url("/Users/apple/Desktop/MediaLP/dist/img/photo-1514496959998-c01c40915c5f.jpeg")
+         no-repeat top/cover;
+    }
+}
+}
+.buttons{
+    button{
+        position: absolute;
+        background-color: inherit;
+        border-color: $bg-lc;
+
+        &#next{
+            right: 1rem;
+            &:hover{
+                @include success-hover;
+                opacity: 0.5;
+            }
+        }
+        &#prev{
+            left: 1rem;
+            &:hover {
+                @include success-hover;
+                opacity: 0.5;
+            }
+
+        }
+    }
+}
+}

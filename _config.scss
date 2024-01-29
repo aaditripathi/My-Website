@@ -1,0 +1,156 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+// General reset
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+// Colors
+$bg-c: #272727;
+$bg-lc: #f5f5f1;
+$prim-c: #341c09;
+$sec-c: #fc7307;
+$social-c: #2196f3;
+$nav-c: #234155;
+$logo-prim-c: #234155;
+$logo-sec-c: #e7bf70;
+$success-c:#4caf50;
+$danger-c:#f44336;
+
+
+// Text Style
+.text{
+    &-xl{
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
+    &-lg{
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }&-md{
+        font-size: 1.5rem;
+        padding-bottom: 0.5rem;
+    }
+    &-center{
+        text-align: center;
+    }
+}
+
+// Mixin
+// transitional
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+// Hover
+@mixin hover {
+    color: $sec-c;
+    cursor: pointer;
+    @include transition-ease;
+
+}
+@mixin success-hover{
+    @include hover;
+    @include transition-ease;
+    background-color: $success-c;
+    box-shadow: 0 5px 10px rgba($success-c, 0.8);
+
+}
+
+//Flex Mixin
+@mixin flex($flex-dir) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: $flex-dir;
+}
+//Grid Mixin
+@mixin grid{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin: auto;
+}
+@mixin tab-grid($repeat){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+// Buttons
+.btn{
+    display: inline-block;
+    background-color: $logo-prim-c;
+    color: $bg-lc;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    @include transition-ease;
+    outline: none;
+    border: 1px solid $prim-c;
+    border-bottom: 1px solid;
+    box-shadow: 0 5px 10px rgba($sec-c, 0.5);
+    &:hover{
+        @include hover;
+        opacity: 0.8;
+    }
+    text-transform: uppercase;
+}
+
+.btn-xl{
+    font: 2rem;
+    padding: 1.5rem 2.2rem;
+
+}
+
+.btn-lg{
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+}
+.btn-md{
+    margin-left: 1rem;
+    font-size: .8rem;
+    text-transform: lowercase;
+}
+
+// Mixins
+// Display
+@mixin media-xl {
+    @media screen and (min-width: 1060px) {
+        @content;    
+    }
+}
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 400px) {
+        @content;
+    }
+        
+}
+
+// Footer
+@mixin footer-rotate {
+    .copy{
+        transform: rotate(90deg) translate(-3rem,-5rem);
+    
+    }
+    .social{
+        @include flex(column);
+    } 
+}

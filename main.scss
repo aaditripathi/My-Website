@@ -1,0 +1,51 @@
+@import 'config';
+@import 'home';
+@import 'menu';
+@import 'about';
+@import 'portfolio';
+@import 'services';
+@import 'requestForm';
+@import 'imgGallery';
+@import 'responsive';
+@import 'contact';
+
+body{
+    background-color: $bg-c;
+    color: $bg-lc;
+    height: 100vh;
+}
+a {
+    color: $bg-lc;
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+}
+footer{
+    .social{
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+
+        padding: .5rem;
+        @include transition-ease;
+
+        &:hover{
+            color: $social-c;
+        }
+    }
+    font-size: 1rem;
+    position: fixed;
+    bottom: .5rem;
+    right: 1rem;
+    padding: 1rem;
+    color: $bg-lc
+}

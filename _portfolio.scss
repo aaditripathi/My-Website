@@ -1,0 +1,72 @@
+.portfolio{
+    padding-top: 2rem;
+
+    &-bio-img{
+        max-height: 30vh;
+        width: 100%;
+        background: linear-gradient(to right, rgba($bg-c, 0.9), rgba($sec-c, 0.1)),
+    url('/dist/img/christoph-nolte-hUhP8wr_dBo-unsplash.jpg') center;
+    background-size: cover;
+    @include flex(column);
+    }
+
+    &-items{
+        padding-top: 2rem;
+        @include grid;
+        margin: 2rem auto 0 auto;
+        width: 80vw;
+        box-shadow: 0 10px 0 black;
+    }
+
+    &-item{
+        position: relative;
+        border: 5px solid;
+        overflow: hidden;
+        cursor: pointer;
+        img{
+            width: 100%;
+        }
+        
+        &::after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: $sec-c;
+            @include transition-ease;
+        }
+
+        &:hover{
+            &::after{
+                top: 0;
+                opacity: 0.5;
+
+            }
+            .portfolio-btn{
+                opacity: 1;
+            }
+        }
+    }
+    &-btns{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-btn{
+        opacity: 0;
+        color: $sec-c;
+        @include transition-ease;
+
+        &:hover{
+            @include hover;
+        }
+    }
+}

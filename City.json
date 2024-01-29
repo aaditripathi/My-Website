@@ -1,0 +1,29 @@
+{
+    "Address": [
+        {
+            "City": "Ayodhya",
+            "Street": "Str. Name 36",
+            "ZipCodes": "24613"
+        },
+        {
+            "City": "Kashmir",
+            "Street": "Str. Name 36",
+            "ZipCodes": "24613"
+        },
+        {
+            "City": "UP",
+            "Street": "Str. Name 36",
+            "ZipCodes": "24613"
+        },
+        {
+            "City": "Pune",
+            "Street": "Str. Name 36",
+            "ZipCodes": "24613"
+        },
+        {
+            "City": "Delhi",
+            "Street": "Str. Name 36",
+            "ZipCodes": "24613"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+.home{
+    height: 100%;
+    padding-top: 20vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, rgba($bg-c, 0.9), rgba($sec-c, 0.1)),
+    url('/dist/img/images.jpeg') center top;
+    background-size: cover;
+
+    &-name {
+        font-size: 5rem;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        border-bottom: 2px solid $bg-lc;
+        color: $sec-c;
+
+
+        &-comp{
+            color: $bg-lc;
+            font-weight: 100;
+        }
+    }
+
+    &-motto{
+        font-family: 'Mansalva', cursive, sans-serif;
+        font-style: italic;
+        padding-bottom: 3rem;
+        font-weight: 100;
+        font-size: 3.5rem;
+        color: rgba($sec-c, 1);
+    }
+
+    &-services li{
+        padding-top: 2rem;
+        color: $prim-c;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        a:hover{
+            @include hover;
+
+        }
+    }
+}
